@@ -22,16 +22,20 @@ function getFourthNum() {
 2. Iterate over the "numbers" array. Push any numbers less than 10 onto "smallNums". Return "smallNums".
 */
 function smallNums() {
-  let smallNums = numbers.map(10 >= Math.min(numbers)); {
-    return smallNums;
+  let smallNums = []
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < 10) {
+      smallNums.push(numbers[i]);
+    }
   }
+  return smallNums;
 }
-
 /*
 3. Add 12, 99, and 101 (in that order) to the end of the "numbers" array. Return the "numbers" array.
 */
 function addNums() {
-  // Your answer here:
+  numbers.push(12, 99, 101);
+  return numbers;
 }
 
 
@@ -87,11 +91,11 @@ let letterVals = ["v", "x", "r", "f", "p"];
 
 function interleave() {
   let vals = [];
-  // Your answer here:
+  for (let i = 0; i < numberVals.length; i++) {
+    vals.push(letterVals[i] + numberVals[i]);
+  }
+  return vals;
 }
-
-
-
 
 
 
@@ -104,5 +108,10 @@ let second = ["think", "stand", "cheese", "break", "numinous", "mouse", "close",
 
 function union() {
   let same = [];
-  // Your answer here:
+  for (let i = 0; i < first.length; i++) {
+    if (first[i] === second[i]) {
+      same.push(first[i])
+  }
+}
+return same;
 }
